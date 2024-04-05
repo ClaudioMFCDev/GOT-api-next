@@ -1,0 +1,23 @@
+[33mcommit 8018e25aede214031fd3cdc6dd00212b8a4721b3[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: ClaudioMFCDev <97706777+ClaudioMFCDev@users.noreply.github.com>
+Date:   Tue Mar 26 15:38:44 2024 -0300
+
+    Dashboard component added
+
+[33mcommit 2122b8625f5c2368e7b2482d325deb2822c46156[m
+Author: ClaudioMFCDev <97706777+ClaudioMFCDev@users.noreply.github.com>
+Date:   Mon Mar 25 19:41:14 2024 -0300
+
+    Dashboard show books
+
+[33mcommit 3b82952324062196031c95b99243396266cb7228[m
+Author: ClaudioMFCDev <97706777+ClaudioMFCDev@users.noreply.github.com>
+Date:   Sun Mar 24 18:15:30 2024 -0300
+
+    Api to users OK
+
+[33mcommit 46eaf5d009642498453f6ab39b6ce7a4fd21e456[m
+Author: ClaudioMFCDev <97706777+ClaudioMFCDev@users.noreply.github.com>
+Date:   Mon Mar 18 17:44:05 2024 -0300
+
+    Initial commit from Create Next App
