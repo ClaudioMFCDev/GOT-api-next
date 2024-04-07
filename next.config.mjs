@@ -2,7 +2,7 @@
 const nextConfig = {
   //add image api library
   images: {
-    domains: ['covers.openlibrary.org']
+    domains: ['thronesapi.com']
   }
 };
 
