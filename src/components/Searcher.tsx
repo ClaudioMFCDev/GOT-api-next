@@ -20,7 +20,7 @@ export default function Searcher() {
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
-        router.push('/dashboard', {author});
+        //router.push('/dashboard', {author});
     }
 
 
