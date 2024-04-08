@@ -10,16 +10,18 @@ export default function LoginForm() {
         <main className="flex min-h-screen flex-col items-center justify-between p-24 ">
 
             <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
-                <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+                <div className="border rounded-2xl bg-white sm:mx-auto sm:w-full sm:max-w-sm">
                     <img
-                        className="mx-auto h-10 w-auto"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                        alt="Your Company"
+                        className=" mx-auto w-auto"
+                        src="/gotLogo.svg"
+                        alt="GotLogo"
+                        width={24}
+                        height={24}
                     />
-                    <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-                        Ingresa a tu cuenta
-                    </h2>
                 </div>
+                <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white">
+                        Ingresa a tu cuenta
+                </h2>
 
                 <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
                     <form className="space-y-6" onSubmit={async (event) => {
@@ -48,7 +50,7 @@ export default function LoginForm() {
                     }} >
 
                         <div>
-                            <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
+                            <label htmlFor="email" className="block text-sm font-medium leading-6 text-white">
                                 E-mail
                             </label>
                             <div className="mt-2">
@@ -65,11 +67,11 @@ export default function LoginForm() {
 
                         <div>
                             <div className="flex items-center justify-between">
-                                <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
+                                <label htmlFor="password" className="block text-sm font-medium leading-6 text-white">
                                     Contraseña
                                 </label>
                                 <div className="text-sm">
-                                    <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
+                                    <a href="#" className="px-2 font-semibold text-indigo-600 hover:text-indigo-500">
                                         Olvidaste la contraseña?
                                     </a>
                                 </div>
