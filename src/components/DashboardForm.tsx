@@ -4,14 +4,15 @@ import { CharacterCard } from "./Character-Card";
 export default async function DashboardPage() {
     const getDashboard = async () => {
         try {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/v2/Characters`);
+            //${process.env.NEXT_PUBLIC_URL}
+            const response = await fetch(`https://thronesapi.com/api/v2/Characters`);
             const data = await response.json();
             //console.log(data)
-            return data || {};
+            return data || {data: []};
             
         } catch (error) {
             console.log(error);
-            return {};
+            return {data: []};
         }
     }
 

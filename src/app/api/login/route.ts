@@ -12,4 +12,4 @@ export const POST = async (req: NextRequest, res: NextResponse) => {
     }else{
         return Response.json({message: "User o pass incorrecto"})
     }
-}
+} 
