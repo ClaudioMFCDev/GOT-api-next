@@ -5,7 +5,7 @@ export default async function DashboardPage() {
     const getDashboard = async () => {
         try {
             //${process.env.NEXT_PUBLIC_URL}
-            const response = await fetch(`https://thronesapi.com/api/v2/Characters`);
+            const response = await fetch('https://thronesapi.com/api/v2/Characters');
             const data = await response.json();
             //console.log(data)
             return data || {data: []};
