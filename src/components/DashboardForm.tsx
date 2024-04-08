@@ -1,4 +1,3 @@
-/* eslint react/no-unescaped-entities */
 import { CharacterCard } from "./Character-Card";
 
 export default async function DashboardPage() {
