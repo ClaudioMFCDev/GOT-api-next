@@ -20,12 +20,8 @@ export default async function DashboardPage() {
     return (
 
         <main>
-            <nav className="flex justify-between m-6 items-center flex-wrap my-8">
-                <h1 className="text-5xl">Game of Thones Characters</h1>
-                {/* <div className="flex flex-wrap">
-                    <input type="text" name="" id="" className="rounded-sm my-2" />
-                    <button type="button" className="my-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm mx-2 px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" >Serch</button>
-                </div> */}
+            <nav  className="flex justify-between mb-10 mt-8 items-center flex-wrap ">
+                <h1 style={{position: 'fixed'}} className="z-40 w-full p-2 border border-transparent rounded text-5xl text-slate-300 bg-grey3">Game of Thones Characters</h1>
             </nav>
 
             <div className="flex place-content-around items-center gap-y-8 gap-x-2 flex-wrap">
