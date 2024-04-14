@@ -41,8 +41,7 @@ export default function LoginForm() {
                         });
 
                         const data = await response.json();
-                        console.log('data recibida', data);
-
+                        
                         if (data.message === "Bienvenido") {
                             router.push('/dashboard');
                         }
