@@ -1,10 +1,12 @@
 'use client';
 
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 
 export default function LoginForm() {
     const router = useRouter();
+    const [error, setError] = useState<string | null>(null);
 
     return (
         <main className="flex min-h-screen flex-col items-center justify-between p-24 ">
@@ -20,7 +22,7 @@ export default function LoginForm() {
                     />
                 </div>
                 <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white">
-                        Ingresa a tu cuenta
+                    Ingresa a tu cuenta
                 </h2>
 
                 <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
@@ -37,14 +39,19 @@ export default function LoginForm() {
                             headers: {
                                 'Content-Type': 'application/json'
                             },
-                            body: JSON.stringify({ user, password })
+                            body: JSON.stringify({ user, password }),
                         });
 
                         const data = await response.json();
+
+                        if (response.ok === false) {
+                            setError(data.message);
+                        }
                         
-                        if (data.message === "Bienvenido") {
+                        if(data.message === 'Bienvenido'){                           
                             router.push('/dashboard');
                         }
+
 
                     }} >
 
@@ -94,6 +101,7 @@ export default function LoginForm() {
                             >
                                 Ingresar
                             </button>
+                            {error && <p className="text-red-500">{error}</p>}
                         </div>
                     </form>
 
