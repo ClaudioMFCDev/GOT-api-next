@@ -8,17 +8,15 @@ export const POST = async (req: NextRequest, res: NextResponse) => {
     const {user, password} = body;
 
 
-    const users = await supabase
+    const usuarioEncontrado = await supabase
     .from('users').select('*')
     .filter('username', 'eq', user)
     .filter('password', 'eq', password)
     .limit(1).single();
-    console.log("usuario de supabase", users);
-
-    // const login = users.data?.find((element) =>  element.username === user 
-    //         && element.password === password)
     
-    if( users.data !== null){
+    console.log("usuario de supabase", usuarioEncontrado);
+    
+    if( usuarioEncontrado.data !== null){
         return Response.json({message: 'Bienvenido'})
     }else{
         return Response.json({message: "User o pass incorrecto"}, {

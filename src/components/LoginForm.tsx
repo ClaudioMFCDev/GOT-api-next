@@ -1,8 +1,10 @@
 'use client';
 
+import { createClient } from "@/utils/supabase/client";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
+const supabase = createClient();
 
 export default function LoginForm() {
     const router = useRouter();
@@ -31,30 +33,24 @@ export default function LoginForm() {
 
                         //get form data
                         const formData = new FormData(event.currentTarget)
-                        const user = formData.get('email');
-                        const password = formData.get('password');
+                        const user = formData.get('email')?.toString();
+                        const password = formData.get('password')?.toString();
 
-                        const response = await fetch('/api/login', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json'
-                            },
-                            body: JSON.stringify({ user, password }),
-                        });
+                        if (user && password) {
+                            const { data, error } = await supabase.auth.signInWithPassword({
+                                email: user,
+                                password: password
+                            })
+                            if (error) {
+                                setError(error.message);
+                                return;
+                            }
 
-                        const data = await response.json();
-
-                        if (response.ok === false) {
-                            setError(data.message);
-                        }
-                        
-                        if(data.message === 'Bienvenido'){                           
+                            console.log('data', data);
                             router.push('/dashboard');
                         }
-
-
-                    }} >
-
+                    }} 
+                    >
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium leading-6 text-white">
                                 E-mail
