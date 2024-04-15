@@ -28,6 +28,7 @@ export default function LoginForm() {
                 </h2>
 
                 <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+                    {/* FORMULARIO */}
                     <form className="space-y-6" onSubmit={async (event) => {
                         event.preventDefault()
 
@@ -41,6 +42,7 @@ export default function LoginForm() {
                                 email: user,
                                 password: password
                             })
+                            
                             if (error) {
                                 setError(error.message);
                                 return;
@@ -60,8 +62,6 @@ export default function LoginForm() {
                                     id="email"
                                     name="email"
                                     type="text"
-                                    autoComplete="email"
-                                    required
                                     className="block w-full rounded-md border-0 px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 color-black"
                                 />
                             </div>
@@ -83,8 +83,6 @@ export default function LoginForm() {
                                     id="password"
                                     name="password"
                                     type="password"
-                                    autoComplete="current-password"
-                                    required
                                     className="block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 />
                             </div>
