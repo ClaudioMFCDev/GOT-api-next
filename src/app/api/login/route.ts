@@ -7,17 +7,22 @@ export const POST = async (req: NextRequest, res: NextResponse) => {
     const supabase = createServerClient();
     const {user, password} = body;
 
-    await supabase.auth.getUser();
 
-    const users = await supabase.from('users').select('*').filter("username", "eq", user).filter("password", "eq", password);
+    const users = await supabase
+    .from('users').select('*')
+    .filter('username', 'eq', user)
+    .filter('password', 'eq', password)
+    .limit(1).single();
     console.log("usuario de supabase", users);
 
-    const login = users.data?.find((element) =>  element.username === user 
-            && element.password === password)
+    // const login = users.data?.find((element) =>  element.username === user 
+    //         && element.password === password)
     
-    if( login !== undefined){
+    if( users.data !== null){
         return Response.json({message: "Bienvenido"})
     }else{
-        return Response.json({message: "User o pass incorrecto"})
+        return Response.json({message: "User o pass incorrecto"}, {
+            status: 401
+        });
     }
-}
+};
