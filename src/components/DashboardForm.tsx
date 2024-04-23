@@ -1,21 +1,16 @@
+import { createServerClient } from "@/utils/supabase/server";
 import { CharacterCard } from "./Character-Card";
+import { redirect } from "next/navigation";
 
 export default async function DashboardPage() {
-    const getDashboard = async () => {
-        try {
-            //${process.env.NEXT_PUBLIC_URL}
-            const response = await fetch('https://thronesapi.com/api/v2/Characters');
-            const data = await response.json();
-            //console.log(data)
-            return data || {data: []};
-            
-        } catch (error) {
-            console.log(error);
-            return {data: []};
-        }
-    }
 
-    const data = await getDashboard();
+    const supabase = createServerClient();
+    const {data} = await supabase.from('character').select('*');
+    const user = await supabase.auth.getUser();
+
+    if (user.error) {
+        return redirect('/');
+    }
     
     return (
 
@@ -25,7 +20,7 @@ export default async function DashboardPage() {
             </nav>
 
             <div className="flex place-content-around items-center gap-y-8 gap-x-2 flex-wrap">
-                {data.map((character: any) => (
+                {data?.map((character: any) => (
                     <CharacterCard character={character} key={character.id}/>
                 ))}
             </div>

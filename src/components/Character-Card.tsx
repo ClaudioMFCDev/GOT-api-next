@@ -13,14 +13,14 @@ export const CharacterCard = ({character}: any) => {
                         <Image
                             style={{ objectFit: 'cover', objectPosition: 'top' }}
                             className="animate-fade-in block h-full w-full scale-100 transform object-cover object-center opacity-100 transition duration-300 group-hover:scale-110"
-                            src={character.imageUrl}
+                            src={character.image}
                             alt="Character-image"
                             width={200}
                             height={200}
                         />
                         <div style={{ backgroundColor: 'gray', width: '70%' }} className="p-3 rounded-xl opacity-60 absolute bottom-0 z-20 m-0 pb-4 ps-4 transition duration-300 ease-in-out group-hover:-translate-y-1 group-hover:translate-x-3 group-hover:scale-110 group-hover:opacity-100">
-                            <h1 className="text-lg font-bold text-white ">{character.firstName}</h1>
-                            <h2 className="text-m font-light text-gray-200 ">{character.lastName}</h2>
+                            <h1 className="text-lg font-bold text-white ">{character.name} {character.lastName}</h1>
+                            <h2 className="text-m font-light text-gray-200 "></h2>
                         </div>
 
                     </div>
