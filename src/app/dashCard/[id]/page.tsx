@@ -1,17 +1,15 @@
 import { createServerClient } from "@/utils/supabase/server";
 import Image from "next/image";
+import Link from "next/link";
 
 
 export default async function DashCard({ params }: any) {
-  console.log(params);
   const supabase = createServerClient();
 
   const character = await supabase
   .from('character').select('*')
   .eq('id', params.id)
   .single();
-
-  console.log(character);
 
   return (
     <main>
@@ -36,7 +34,7 @@ export default async function DashCard({ params }: any) {
           </div>
         </div>
       </div>
-
+      <Link href={`${character.data?.id}/edit`} >Edit</Link>
     </main>
   )
 }

@@ -20,9 +20,7 @@ export const CharacterCard = ({character}: any) => {
                         />
                         <div style={{ backgroundColor: 'gray', width: '70%' }} className="p-3 rounded-xl opacity-60 absolute bottom-0 z-20 m-0 pb-4 ps-4 transition duration-300 ease-in-out group-hover:-translate-y-1 group-hover:translate-x-3 group-hover:scale-110 group-hover:opacity-100">
                             <h1 className="text-lg font-bold text-white ">{character.name} {character.lastName}</h1>
-                            <h2 className="text-m font-light text-gray-200 "></h2>
                         </div>
-
                     </div>
                 </div>
             </div>

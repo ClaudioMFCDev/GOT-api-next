@@ -9,6 +9,7 @@ export const CreateCharacter = () => {
     return (
         <main>
             <h1 className="text-white">Create Page</h1>
+            
             <form className="text-black" onSubmit={async (event) => {
                 event.preventDefault()
                 //get form data
@@ -24,19 +25,19 @@ export const CreateCharacter = () => {
 
             }}>
 
-                <label htmlFor="">Name</label>
+                <label> Name</label>
                 <input name="name" type="text" />
 
-                <label htmlFor="">Last Name</label>
+                <label> Last Name</label>
                 <input name="lastName" type="text" />
 
-                <label htmlFor="">House</label>
+                <label> House</label>
                 <input name="house" type="text" /><br />
 
-                <label htmlFor="">Title</label>
+                <label> Title</label>
                 <input name="title" type="text" />
 
-                <label htmlFor="">Picture</label>
+                <label> Picture</label>
                 <input name="image" type="text" />
 
                 <button type="submit">create</button>
