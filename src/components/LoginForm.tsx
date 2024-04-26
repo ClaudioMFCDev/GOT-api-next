@@ -8,9 +8,9 @@ export default function LoginForm() {
     const [error, setError] = useState<string | null>(null);
 
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-24 ">
+        <main className=" flex min-h-screen flex-col items-center justify-between p-24 ">
 
-            <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+            <div className=" border rounded border-grey3  flex min-h-full flex-1 flex-col justify-center px-20 py-12 ">
                 <div className="border rounded-2xl bg-white sm:mx-auto sm:w-full sm:max-w-sm">
                     <img
                         className=" mx-auto w-auto"
@@ -44,7 +44,7 @@ export default function LoginForm() {
                                     id="email"
                                     name="email"
                                     type="text"
-                                    className="block w-full rounded-md border-0 px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 color-black"
+                                    className="block w-full rounded-md border-0 px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600  color-black"
                                 />
                             </div>
                         </div>
@@ -54,11 +54,6 @@ export default function LoginForm() {
                                 <label htmlFor="password" className="block text-sm font-medium leading-6 text-white">
                                     Contraseña
                                 </label>
-                                <div className="text-sm">
-                                    <a href="#" className="px-2 font-semibold text-indigo-600 hover:text-indigo-500">
-                                        Olvidaste la contraseña?
-                                    </a>
-                                </div>
                             </div>
                             <div className="mt-2">
                                 <input
@@ -68,12 +63,17 @@ export default function LoginForm() {
                                     className="block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 />
                             </div>
+                                <div className="text-sm mt-2 text-right	">
+                                    <a href="#" className="font-semibold text-grey3 hover:text-white">
+                                        Olvidaste la contraseña?
+                                    </a>
+                                </div>
                         </div>
 
                         <div>
                             <button
                                 type="submit"
-                                className="flex w-full justify-center rounded-md bg-grey1 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-grey2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-grey3"
+                                className="flex w-full justify-center rounded-md bg-grey3 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-grey2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-grey1"
                             >
                                 Ingresar
                             </button>

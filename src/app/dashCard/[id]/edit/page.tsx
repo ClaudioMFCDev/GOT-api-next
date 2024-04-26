@@ -8,7 +8,6 @@ export default async function Edit({params}: any) {
         .select('*')
         .eq('id', params.id)
         .single();
-    console.log("++++++++++++++++++", data);
     
     // enviamos objeto 'data' por parametro
 

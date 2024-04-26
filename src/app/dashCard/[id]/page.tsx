@@ -1,3 +1,4 @@
+import { DeleteCharButton } from "@/components/Delete-Char";
 import { createServerClient } from "@/utils/supabase/server";
 import Image from "next/image";
 import Link from "next/link";
@@ -34,7 +35,8 @@ export default async function DashCard({ params }: any) {
           </div>
         </div>
       </div>
-      <Link href={`${character.data?.id}/edit`} >Edit</Link>
+      <Link className="border rounded-lg p-2 bg-red-500 m-4" type="button" href={`${character.data?.id}/edit`} >Edit</Link>
+      <DeleteCharButton character={character.data}/>
     </main>
   )
 }

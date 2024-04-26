@@ -13,7 +13,7 @@ export const CharacterCard = ({character}: any) => {
                         <Image
                             style={{ objectFit: 'cover', objectPosition: 'top' }}
                             className="animate-fade-in block h-full w-full scale-100 transform object-cover object-center opacity-100 transition duration-300 group-hover:scale-110"
-                            src={character.image}
+                            src={character?.image}
                             alt="Character-image"
                             width={200}
                             height={200}

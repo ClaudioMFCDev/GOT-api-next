@@ -38,7 +38,7 @@ export default function EditChar({ character }: EditCharProps) {
       <Image
         style={{ objectFit: "cover", objectPosition: "top" }}
         className=" h-96 w-96 m-4 "
-        src={character.image}
+        src={character?.image}
         alt="Character-image"
         width={200}
         height={200}
