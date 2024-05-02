@@ -14,5 +14,5 @@ export const DeleteCharButton = ({character}: any) => {
       
     }
 
-  return <button className="border rounded-lg p-2 bg-red-500 m-4" onClick={onDelete} >Delete</button>
+  return <button className="bg-grey4 text-white h-10 w-28 border rounded-lg p-2 m-4" onClick={onDelete} >Delete</button>
 }

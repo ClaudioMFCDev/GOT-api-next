@@ -27,8 +27,8 @@ export default async function DashCard({ params }: any) {
             />
             <div style={{ backgroundColor: 'white', width: '70%'}} className="p-3 rounded-xl bottom-0 z-20 m-0 pb-4 ps-4 transition duration-300 ease-in-out group-hover:-translate-y-1 group-hover:translate-x-3 group-hover:scale-110 group-hover:opacity-100">
               <h1 className="text-lg font-bold text-red-500">{character.data?.name}{character.data?.lastName}</h1>
-              <h2 className="text-m font-light text-gray-200 text-red-500">Family: {character.data?.family}</h2>
-              <h2 className="text-m font-light text-gray-200 text-red-500">Title: {character.data?.title}</h2>
+              <h2 className="text-m font-light text-red-500">Family: {character.data?.family}</h2>
+              <h2 className="text-m font-light text-red-500">Title: {character.data?.title}</h2>
               
             </div>
 
