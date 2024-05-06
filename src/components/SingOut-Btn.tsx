@@ -10,9 +10,8 @@ export const SingOutBtn = () => {
 
     const singOut = async () => {
         await supabase.auth.signOut();
-        router.push('/dashboard');
-        
+        router.push('/');
       }
 
-    return <button className="z-40 border rounded-lg p-2 bg-red-500 m-4" onClick={singOut} >Delete</button>
+    return <button className="z-40 border rounded-lg p-2 bg-grey4 text-white h-10 w-28" onClick={singOut} >Sing Out</button>
 }

@@ -1,4 +1,4 @@
-import EditChar from "@/components/EditChar";
+import EditCard from "@/components/EditChar";
 import { createServerClient } from "@/utils/supabase/server";
 
 export default async function Edit({params}: any) {
@@ -12,6 +12,6 @@ export default async function Edit({params}: any) {
     // enviamos objeto 'data' por parametro
 
     return (
-        <EditChar character={data}/>
+        <EditCard character={data}/>
     )
 }

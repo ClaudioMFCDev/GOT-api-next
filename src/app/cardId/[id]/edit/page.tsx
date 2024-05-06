@@ -1,4 +1,4 @@
-import EditCard from "@/components/EditChar";
+import EditCard from "@/components/EditCard";
 import { createServerClient } from "@/utils/supabase/server";
 
 export default async function Edit({params}: any) {

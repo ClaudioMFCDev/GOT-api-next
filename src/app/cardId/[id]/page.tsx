@@ -13,9 +13,9 @@ export default async function DashCard({ params }: any) {
     .single();
 
   return (
-    <div className="m-8 h-screen w-screen sm:flex md:flex lg:flex flex-none justify-center items-center">
+    <div className=" m-8 h-screen w-screen sm:flex md:flex lg:flex flex-none justify-center items-center">
       {/* box 1 */}
-      <div className="sm:max-w-96 sm:min-h-96 md:min-h-96 md:max-w-96 lg:max-w-96 lg:min-h-96 h-64 w-80 bg-slate-600 bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden">
+      <div className="sm:max-w-96 sm:min-h-96 md:min-h-96 md:max-w-96 lg:max-w-96 lg:min-h-96 h-64 w-80 bg-slate-600 bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center">
         <Image
           style={{ objectFit: "cover", objectPosition: "top" }}
           className="h-full w-full scale-100 object-cover object-center opacity-100"
@@ -37,7 +37,7 @@ export default async function DashCard({ params }: any) {
           <div className="border-solid border-black border-t-2 mt-2"></div>
 
           {/* CHAR INFO */}
-          <div className=" bg-slate-30 ">
+          <div>
             <div className="grid grid-cols-2 m-2">
               <div>
                 <p className="text-gray-700 text-base font-semibold">

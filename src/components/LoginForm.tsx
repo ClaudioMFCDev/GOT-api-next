@@ -33,6 +33,24 @@ export default function LoginForm() {
                         const formData = new FormData(event.currentTarget)
                         const user = formData.get('email')?.toString();
                         const password = formData.get('password')?.toString();
+
+                        const response = await fetch('/api/login', {
+                            method: 'POST',
+                            headers: {
+                              'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({ user, password }),
+                          });
+                  
+                          const data = await response.json();
+                  
+                          if (response.ok === false) {
+                            setError(data.message);
+                          } else {
+                            router.push('/dashboard');
+                          }
+
+
                     }} 
                     >
                         <div>
