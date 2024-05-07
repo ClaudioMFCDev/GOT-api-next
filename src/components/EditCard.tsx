@@ -34,12 +34,11 @@ export default function EditChar({ character }: EditCharProps) {
 
   return (
     <main>
-
-
-    <h1 className=" h-10 w-32 flex items-center bg-white">Edit character</h1>
-      <div className="m-8 h-screen w-screen sm:flex md:flex lg:flex flex-none justify-center items-center">
+      <div className=" h-screen w-screen sm:flex md:flex lg:flex flex-none justify-center items-center">
+        
         {/* box 1 */}
-        <div className="sm:max-w-96 sm:min-h-96 md:min-h-96 md:max-w-96 lg:max-w-96 lg:min-h-96 h-64 w-80 bg-slate-600 bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden">
+        
+        <div className="h-64 w-80 sm:max-w-96 sm:min-h-96 md:min-h-96 md:max-w-96 lg:max-w-96 lg:min-h-96 bg-slate-600 bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden">
           <Image
             style={{ objectFit: "cover", objectPosition: "top" }}
             className="h-full w-full scale-100 object-cover object-center opacity-100"

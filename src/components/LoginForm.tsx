@@ -8,12 +8,12 @@ export default function LoginForm() {
     const [error, setError] = useState<string | null>(null);
 
     return (
-        <main className=" flex min-h-screen flex-col items-center justify-between p-24 ">
+        <main className=" bg-xhonolulublue  flex min-h-screen flex-col items-center justify-between p-10 ">
 
-            <div className=" border rounded border-grey3  flex min-h-full flex-1 flex-col justify-center px-20 py-12 ">
+            <div className=" border-2 rounded-3xl border-xlightcyan  flex min-h-full flex-1 flex-col justify-center px-20 py-12 ">
                 <div className="border rounded-2xl bg-white sm:mx-auto sm:w-full sm:max-w-sm">
                     <img
-                        className=" mx-auto w-auto"
+                        className=" mx-auto w-60"
                         src="/gotLogo.svg"
                         alt="GotLogo"
                         width={24}
@@ -82,7 +82,7 @@ export default function LoginForm() {
                                 />
                             </div>
                                 <div className="text-sm mt-2 text-right	">
-                                    <a href="#" className="font-semibold text-grey3 hover:text-white">
+                                    <a href="#" className="font-semibold text-xlightcyan hover:text-white">
                                         Olvidaste la contraseña?
                                     </a>
                                 </div>
@@ -91,11 +91,11 @@ export default function LoginForm() {
                         <div>
                             <button
                                 type="submit"
-                                className="flex w-full justify-center rounded-md bg-grey3 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-grey2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-grey1"
+                                className="flex w-full justify-center rounded-md bg-xlightcyan px-3 py-1.5 text-sm font-semibold leading-6 text-black shadow-sm hover:bg-xnonphotoblue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-xhonolulublue"
                             >
                                 Ingresar
                             </button>
-                            {error && <p className="text-red-500">{error}</p>}
+                            {error && <p className="mt-4 text-xlightcyan">{error}</p>}
                         </div>
                     </form>
 

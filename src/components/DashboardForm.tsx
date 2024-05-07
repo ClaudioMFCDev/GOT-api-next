@@ -14,7 +14,7 @@ export default async function DashboardPage() {
 
   return (
     <main>
-      <nav className=" mb-4 items-center w-full flex-wrap bg-grey3 p-2">
+      <nav className=" mb-4 items-center w-full flex-wrap bg-xpacificcyan p-2">
         <div className="flex justify-start items-center flex-shrink-0 text-white mr-6">
           <div >
             <img src="/gotLogo.svg" alt="GotLogo" width={100} height={100} />
@@ -27,7 +27,7 @@ export default async function DashboardPage() {
       </nav>
       {/*NAV-END*/}
 
-      <div className="flex place-content-around items-center gap-y-8 gap-x-2 flex-wrap">
+      <div className=" bg-xlightcyan flex place-content-around items-center gap-y-8 gap-x-2 flex-wrap">
         {data?.map((character: any) => (
           <CharacterCard character={character} key={character.id} />
         ))}

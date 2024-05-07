@@ -13,9 +13,9 @@ export default async function DashCard({ params }: any) {
     .single();
 
   return (
-    <div className=" m-8 h-screen w-screen sm:flex md:flex lg:flex flex-none justify-center items-center">
+    <div className="bg-white m-8 h-screen w-screen sm:flex md:flex lg:flex flex-none justify-center items-center rounded-t rounded-b overflow-hidden ">
       {/* box 1 */}
-      <div className="sm:max-w-96 sm:min-h-96 md:min-h-96 md:max-w-96 lg:max-w-96 lg:min-h-96 h-64 w-80 bg-slate-600 bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center">
+      <div className="shadow-2xl sm:max-w-96 sm:min-h-96 md:min-h-96 md:max-w-96 lg:max-w-96 lg:min-h-96 h-64 w-80 bg-slate-600 bg-cover rounded-t rounded-b overflow-hidden text-center">
         <Image
           style={{ objectFit: "cover", objectPosition: "top" }}
           className="h-full w-full scale-100 object-cover object-center opacity-100"
@@ -26,7 +26,7 @@ export default async function DashCard({ params }: any) {
         />
       </div>
       {/* box 2 */}
-      <div className=" bg-blue-100 sm:max-w-96 sm:min-h-96 md:min-h-96 md:max-w-96 lg:max-w-96 lg:min-h-96 h-64 w-80 border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+      <div className="shadow-2xl rounded-t overflow-hidden bg-blue-100 sm:max-w-96 sm:min-h-96 md:min-h-96 md:max-w-96 lg:max-w-96 lg:min-h-96 h-64 w-80 border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
         <div className="text-center">
           <div
             className="divide-y text-gray-900 font-bold text-xl "
