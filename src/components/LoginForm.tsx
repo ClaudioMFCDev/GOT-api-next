@@ -91,7 +91,7 @@ export default function LoginForm() {
                         <div>
                             <button
                                 type="submit"
-                                className="flex w-full justify-center rounded-md bg-xlightcyan px-3 py-1.5 text-sm font-semibold leading-6 text-black shadow-sm hover:bg-xnonphotoblue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-xhonolulublue"
+                                className="w-full justify-center rounded-lg bg-xlightcyan h-10 text-md font-semibold leading-6 text-black shadow-sm transition duration-300 hover:bg-xnonphotoblue  hover:border-white hover:border-4 hover:text-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-xhonolulublue"
                             >
                                 Ingresar
                             </button>

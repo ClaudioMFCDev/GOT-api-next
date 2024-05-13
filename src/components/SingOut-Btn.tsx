@@ -1,17 +1,24 @@
-'use client';
+"use client";
 
 import { createClient } from "@/utils/supabase/client";
 import { useRouter } from "next/navigation";
 
-
 export const SingOutBtn = () => {
-    const supabase = createClient();
-    const router = useRouter();
+  const supabase = createClient();
+  const router = useRouter();
 
-    const singOut = async () => {
-        await supabase.auth.signOut();
-        router.push('/');
-      }
+  const singOut = async () => {
+    await supabase.auth.signOut();
+    router.push("/");
+  };
 
-    return <button className="z-40 border rounded-lg p-2 bg-grey4 text-white h-10 w-28" onClick={singOut} >Sing Out</button>
-}
+  return (
+    <button
+      className="z-40 text-center border rounded-lg bg-xlightcyan transition duration-300
+       hover:bg-xnonphotoblue hover:border-white hover:border-4 hover:text-lg text-black h-10 w-28"
+      onClick={singOut}
+    >
+      Sing Out
+    </button>
+  );
+};
