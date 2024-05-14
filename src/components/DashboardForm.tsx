@@ -9,14 +9,17 @@ export default async function DashboardPage() {
   const { data } = await supabase.from("character").select("*");
 
   return (
-    <main className="bg-white">
-      <nav className=" mb-20 items-center w-full flex justify-between  flex-wrap bg-xpacificcyan p-2">
+    <main className=" bg-xxpaynesGray">
+      {/* NAV */}
+      <nav className=" shadow-xl mb-20 items-center w-full flex justify-between  flex-wrap bg-xxouterSpace p-2">
         <div className="flex justify-start items-center flex-shrink-0 text-white mr-6">
-          <div className=" min-w-24 min-h-12">
+          <div className=" min-w-24 min-h-12 bg-white rounded">
             <img src="/gotLogo.svg" alt="GotLogo" width={100} height={100} />
           </div>
-          <div className="mt-0  font-semibold text-xl tracking-tight lg:inline-block text-white hover:text-black">
-            <p className="flex">Game of Thrones Characters</p>
+          <div className="flex mt-0 px-2 font-semibold text-xl tracking-tight lg:inline-block text-white hover:text-black">
+            <li className="">Characters</li>
+            <li>Families</li>
+            <li>Cities</li>
           </div>
         </div>
         <div>
@@ -27,16 +30,16 @@ export default async function DashboardPage() {
       {/*NAV-END*/}
 
       <div className=" m-6">
-        <h2 className=" text-5xl mb-4">Game of Thrones</h2>
+        <h2 className=" text-white text-5xl mb-4">Game of Thrones</h2>
         <Typewriters />
       </div>
 
-      <div className=" mx-4 bg-white flex place-content-around items-center gap-y-8 gap-x-2 flex-wrap">
+      <div className=" mx-4 bg-xxpaynesGray flex place-content-around items-center gap-y-8 gap-x-2 flex-wrap">
         {data?.map((character: any) => (
           <CharacterCard character={character} key={character.id} />
         ))}
       </div>
-      <footer className=" bg-xnonphotoblue mt-6 w-full h-20"></footer>
+      <footer className=" bg-xoxfordblue mt-6 w-full h-20"></footer>
     </main>
   );
 }

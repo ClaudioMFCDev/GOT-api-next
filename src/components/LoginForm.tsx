@@ -8,9 +8,9 @@ export default function LoginForm() {
     const [error, setError] = useState<string | null>(null);
 
     return (
-        <main className=" bg-xhonolulublue  flex min-h-screen flex-col items-center justify-between p-10 ">
+        <main className=" bg-slate-800 flex min-h-screen flex-col items-center justify-between p-10 ">
 
-            <div className=" border-2 rounded-3xl border-xlightcyan  flex min-h-full flex-1 flex-col justify-center px-20 py-12 ">
+            <div className=" bg-white  border-2 rounded-3xl border-xlightcyan  flex min-h-full flex-1 flex-col justify-center px-20 py-12 ">
                 <div className="border rounded-2xl bg-white sm:mx-auto sm:w-full sm:max-w-sm">
                     <img
                         className=" mx-auto w-60"
@@ -20,7 +20,7 @@ export default function LoginForm() {
                         height={24}
                     />
                 </div>
-                <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white">
+                <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight ">
                     Ingresa a tu cuenta
                 </h2>
 
@@ -54,7 +54,7 @@ export default function LoginForm() {
                     }} 
                     >
                         <div>
-                            <label htmlFor="email" className="block text-sm font-medium leading-6 text-white">
+                            <label htmlFor="email" className="block text-sm font-medium leading-6 ">
                                 E-mail
                             </label>
                             <div className="mt-2">
@@ -69,7 +69,7 @@ export default function LoginForm() {
 
                         <div>
                             <div className="flex items-center justify-between">
-                                <label htmlFor="password" className="block text-sm font-medium leading-6 text-white">
+                                <label htmlFor="password" className="block text-sm font-medium leading-6 ">
                                     Contraseña
                                 </label>
                             </div>
@@ -82,7 +82,7 @@ export default function LoginForm() {
                                 />
                             </div>
                                 <div className="text-sm mt-2 text-right	">
-                                    <a href="#" className="font-semibold text-xlightcyan hover:text-white">
+                                    <a href="#" className="font-semibold  hover:text-xoxfordblue hover:shadow-sm hover:text-base hover:shadow-slate-300">
                                         Olvidaste la contraseña?
                                     </a>
                                 </div>
@@ -91,7 +91,7 @@ export default function LoginForm() {
                         <div>
                             <button
                                 type="submit"
-                                className="w-full justify-center rounded-lg bg-xlightcyan h-10 text-md font-semibold leading-6 text-black shadow-sm transition duration-300 hover:bg-xnonphotoblue  hover:border-white hover:border-4 hover:text-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-xhonolulublue"
+                                className="w-full justify-center rounded-lg bg-xxfrenchGray h-10 text-md font-semibold leading-6  shadow-sm transition duration-300 hover:bg-xxouterSpace  hover:border-xxouterSpace hover:border-4 hover:text-lg hover:text-white  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-xhonolulublue"
                             >
                                 Ingresar
                             </button>
