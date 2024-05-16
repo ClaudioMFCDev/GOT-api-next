@@ -8,10 +8,10 @@ export default function LoginForm() {
     const [error, setError] = useState<string | null>(null);
 
     return (
-        <main className=" bg-slate-800 flex min-h-screen flex-col items-center justify-between p-10 ">
+        <main className=" bg-slate-900 text-white flex min-h-screen flex-col items-center justify-between p-10 ">
 
-            <div className=" bg-white  border-2 rounded-3xl border-xlightcyan  flex min-h-full flex-1 flex-col justify-center px-20 py-12 ">
-                <div className="border rounded-2xl bg-white sm:mx-auto sm:w-full sm:max-w-sm">
+            <div className="  border-2 rounded-3xl border-amber-500  flex min-h-full flex-1 flex-col justify-center px-20 py-12 ">
+                <div className=" bg-xxplatinum border rounded-2xl  sm:mx-auto sm:w-full sm:max-w-sm">
                     <img
                         className=" mx-auto w-60"
                         src="/gotLogo.svg"
@@ -91,7 +91,7 @@ export default function LoginForm() {
                         <div>
                             <button
                                 type="submit"
-                                className="w-full justify-center rounded-lg bg-xxfrenchGray h-10 text-md font-semibold leading-6  shadow-sm transition duration-300 hover:bg-xxouterSpace  hover:border-xxouterSpace hover:border-4 hover:text-lg hover:text-white  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-xhonolulublue"
+                                className="w-full justify-center rounded-lg bg-xxpaynesGray h-10 text-md font-semibold leading-6  shadow-sm transition duration-300 hover:bg-amber-500   hover:text-lg hover:text-white  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-xhonolulublue"
                             >
                                 Ingresar
                             </button>

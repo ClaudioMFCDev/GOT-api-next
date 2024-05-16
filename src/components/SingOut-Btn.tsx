@@ -13,12 +13,11 @@ export const SingOutBtn = () => {
   };
 
   return (
-    <button
-      className="z-40 text-center border rounded-lg bg-xlightcyan transition duration-300
-       hover:bg-xnonphotoblue hover:border-white hover:border-4 hover:text-lg text-black h-10 w-28"
+    <a
+      className="hover:bg-gray-200 block px-4 py-2 text-sm text-gray-700"
       onClick={singOut}
     >
       Sing Out
-    </button>
+    </a>
   );
 };
