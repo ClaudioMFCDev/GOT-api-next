@@ -1,17 +1,17 @@
-import EditCard from "@/components/EditChar";
-import { createServerClient } from "@/utils/supabase/server";
+// import EditCard from "@/components/EditChar";
+// import { createServerClient } from "@/utils/supabase/server";
 
-export default async function Edit({params}: any) {
-    const supabase = createServerClient();
-    const { data } = await supabase
-        .from('character')
-        .select('*')
-        .eq('id', params.id)
-        .single();
+// export default async function Edit({params}: any) {
+//     const supabase = createServerClient();
+//     const { data } = await supabase
+//         .from('character')
+//         .select('*')
+//         .eq('id', params.id)
+//         .single();
     
-    // enviamos objeto 'data' por parametro
+//     // enviamos objeto 'data' por parametro
 
-    return (
-        <EditCard character={data}/>
-    )
-}
+//     return (
+//         <EditCard character={data}/>
+//     )
+// }

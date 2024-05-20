@@ -34,11 +34,10 @@ export default function EditChar({ character }: EditCharProps) {
 
   return (
     <main>
-      <div className=" h-screen w-screen sm:flex md:flex lg:flex flex-none justify-center items-center">
-        
+      <div 
+      className=" sm:flex flex-none justify-center items-center">
         {/* box 1 */}
-        
-        <div className="h-64 w-80 sm:max-w-96 sm:min-h-96 md:min-h-96 md:max-w-96 lg:max-w-96 lg:min-h-96 bg-slate-600 bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden">
+        <div className=" h-56 w-80 border-4 rounded-t border-b-0 sm:border-b-4 sm:rounded-b sm:border-r-0 sm:border-t-0 sm:max-w-96 sm:min-h-96 border-amber-500 bg-slate-600 bg-cover lg:rounded-t-none lg:rounded-l text-center overflow-hidden">
           <Image
             style={{ objectFit: "cover", objectPosition: "top" }}
             className="h-full w-full scale-100 object-cover object-center opacity-100"
@@ -51,73 +50,92 @@ export default function EditChar({ character }: EditCharProps) {
         {/* box 2 */}
         <form
           onSubmit={onSubmit}
-          className=" bg-blue-100 sm:max-w-96 sm:min-h-96 md:min-h-96 md:max-w-96 lg:max-w-96 lg:min-h-96 h-64 w-80 border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal"
+          className="p-6 h-80 w-80 border-4 rounded-b border-t-0 rounded-r sm:border-l-0 sm:rounded-t-none sm:rounded-l-none border-amber-500 bg-opacity-30 bg-gray-200 text-white sm:max-w-96 sm:min-h-96 justify-between leading-normal"
         >
-          <div className="grid">
-            <label className="text-gray-700 text-base font-semibold">
-              First Name
-            </label>
-            <input
-              className="mb-2"
-              defaultValue={character?.name}
-              name="name"
-              type="text"
-            />
-
-            <label className="text-gray-700 text-base font-semibold">
-              Last Name
-            </label>
-
-            <input
-              className="mb-2"
-              defaultValue={character?.lastName}
-              name="lastName"
-              type="text"
-            />
+          <div className="">
+            <div>
+              <label className="text-amber-500 font-semibold text-sm sm:text-base">
+                First Name
+              </label>
+            </div>
+            <div>
+              <input
+                className="pl-1 w-60 sm:mb-1 sm:mt-0.5 rounded text-black font-semibold text-sm sm:text-base"
+                defaultValue={character?.name}
+                name="name"
+                type="text"
+              />
+            </div>
+            <div>
+              <label className="text-amber-500 font-semibold text-sm sm:text-base">
+                Last Name
+              </label>
+            </div>
+            <div>
+              <input
+                className="pl-1 w-60 sm:mb-1 sm:mt-0.5 rounded text-black font-semibold text-sm sm:text-base"
+                defaultValue={character?.lastName}
+                name="lastName"
+                type="text"
+              />
+            </div>
           </div>
 
-          <div className="grid">
-            <label className="text-gray-700 text-base font-semibold">
-              House
-            </label>
-            <input
-              className="mb-2"
-              defaultValue={character?.house}
-              name="house"
-              type="text"
-            />
-
-            <label className="text-gray-700 text-base font-semibold">
-              Title
-            </label>
-            <input
-              className="mb-2"
-              defaultValue={character?.title}
-              name="title"
-              type="text"
-            />
+          <div className="">
+            <div>
+              <label className="text-amber-500 font-semibold text-sm sm:text-base">
+                House
+              </label>
+            </div>
+            <div>
+              <input
+                className="pl-1 w-60 sm:mb-1 sm:mt-0.5 rounded text-black font-semibold text-sm sm:text-base"
+                defaultValue={character?.house}
+                name="house"
+                type="text"
+              />
+            </div>
+            <div>
+              <label className="text-amber-500 font-semibold text-sm sm:text-base">
+                Title
+              </label>
+            </div>
+            <div>
+              <input
+                className="pl-1 w-60 sm:mb-1 sm:mt-0.5 rounded text-black font-semibold text-sm sm:text-base"
+                defaultValue={character?.title}
+                name="title"
+                type="text"
+              />
+            </div>
           </div>
 
-          <label className="text-gray-700 text-base font-semibold">
-            Picture
-          </label>
-          <input
-            className="mb-2"
-            defaultValue={character?.image}
-            name="image"
-            type="text"
-          />
+          <div className="">
+            <div>
+              <label className="text-amber-500 font-semibold text-sm sm:text-base">
+                Picture
+              </label>
+            </div>
+            <div>
+              <input
+                className="italic pl-1 w-60 sm:mb-1 sm:mt-0.5 rounded text-black font-semibold text-sm sm:text-base"
+                defaultValue={character?.image}
+                name="image"
+                type="text"
+              />
+            </div>
 
-          <div
-            id="buttons-char"
-            className=" flex justify-end items-end  sm:h-32 md:h-32 lg:h-32  h-12"
-          >
-            <button
-              className="border rounded-lg p-2 bg-grey4 text-white h-10 w-28"
-              type="submit"
+            <div
+              id="buttons-char"
+              className="  flex justify-center items-center sm:h-24"
             >
-              Save
-            </button>
+              <button
+                className=" px-3 py-2 mt-2 h-9 w-28 sm:mt-0 border-2 border-amber-400 bg-white text-amber-500 rounded-md text-sm font-bold hover:bg-amber-500 hover:text-white hover:font-semibold hover:border-none"
+                type="submit"
+              >
+                SAVE
+              </button>
+            </div>
           </div>
         </form>
       </div>

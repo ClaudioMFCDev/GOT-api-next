@@ -30,7 +30,7 @@ export const CreateCharacter = () => {
             }}
           >
             <div>
-              <label> Name</label>
+              <label className="text-white text-base font-semibold"> Name</label>
               <input
                 className="w-80 mb-2 mt-0.5 rounded p-1 text-black font-semibold"
                 name="name"
@@ -38,7 +38,7 @@ export const CreateCharacter = () => {
               />
             </div>
             <div>
-              <label> Last Name</label>
+              <label className="text-white text-base font-semibold"> Last Name</label>
               <input
                 className="w-80 mb-2 mt-0.5 rounded p-1 text-black font-semibold"
                 name="lastName"
@@ -46,7 +46,7 @@ export const CreateCharacter = () => {
               />
             </div>
             <div>
-              <label> House</label>
+              <label className="text-white text-base font-semibold"> House</label>
               <input
                 className="w-80 mb-2 mt-0.5 rounded p-1 text-black font-semibold"
                 name="house"
@@ -54,7 +54,7 @@ export const CreateCharacter = () => {
               />
             </div>
             <div>
-              <label> Title</label>
+              <label className="text-white text-base font-semibold"> Title</label>
               <input
                 className="w-80 mb-2 mt-0.5 rounded p-1 text-black font-semibold"
                 name="title"
@@ -62,9 +62,9 @@ export const CreateCharacter = () => {
               />
             </div>
             <div>
-              <label> Picture</label>
+              <label className="text-white text-base font-semibold"> Picture</label>
               <input
-                className="w-80 mb-2 mt-0.5 rounded p-1 text-black font-semibold"
+                className="italic w-80 mb-2 mt-0.5 rounded p-1 text-black font-semibold"
                 name="image"
                 type="text"
               />
