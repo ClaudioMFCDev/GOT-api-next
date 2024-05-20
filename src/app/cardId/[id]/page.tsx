@@ -1,4 +1,5 @@
 import { DeleteCharButton } from "@/components/Delete-Char";
+import MyNavBar from "@/components/NavBar";
 import { createServerClient } from "@/utils/supabase/server";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,7 +15,11 @@ export default async function DashCard({ params }: any) {
 
   return (
     <main>
-      <div className="p-2 pb-40 min-w-80">
+      <MyNavBar/>
+      <div
+          style={{backgroundImage: 'url(https://wallpapergod.com/images/hd/game-of-thrones-1920X1080-wallpaper-u1cdpjrxyhy3w35y.jpeg)'}}
+
+       className="p-2 pb-40 min-w-80">
         <div className=" mb-4 sm:mb-0 sm:w-full w-80 rounded-t bg-opacity-90 bg-gray-500 flex justify-center items-center ">
           <div>
             <h1 className=" h-10 w-full flex items-center text-3xl font-semibold text-amber-500">
