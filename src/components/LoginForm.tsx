@@ -8,9 +8,9 @@ export default function LoginForm() {
     const [error, setError] = useState<string | null>(null);
 
     return (
-        <main className=" bg-slate-900 text-white flex min-h-screen flex-col items-center justify-between p-10 ">
+        <main className=" bg-gray-800 text-white flex min-h-screen flex-col items-center justify-between p-10 ">
 
-            <div className="  border-2 rounded-3xl border-amber-500  flex min-h-full flex-1 flex-col justify-center px-20 py-12 ">
+            <div className="  border-4 rounded-3xl border-amber-500  flex min-h-full flex-1 flex-col justify-center px-20 py-10 ">
                 <div className=" bg-xxplatinum border rounded-2xl  sm:mx-auto sm:w-full sm:max-w-sm">
                     <img
                         className=" mx-auto w-60"
@@ -20,7 +20,7 @@ export default function LoginForm() {
                         height={24}
                     />
                 </div>
-                <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight ">
+                <h2 className="font-serif mt-10 text-center text-2xl font-bold leading-9 tracking-tight ">
                     Ingresa a tu cuenta
                 </h2>
 
@@ -82,7 +82,7 @@ export default function LoginForm() {
                                 />
                             </div>
                                 <div className="text-sm mt-2 text-right	">
-                                    <a href="#" className="font-semibold  hover:text-xoxfordblue hover:shadow-sm hover:text-base hover:shadow-slate-300">
+                                    <a href="#" className="font-semibold  hover:text-base hover:shadow-slate-300">
                                         Olvidaste la contraseña?
                                     </a>
                                 </div>

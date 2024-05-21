@@ -1,4 +1,5 @@
 import { DeleteCharButton } from "@/components/Delete-Char";
+import MyFooter from "@/components/Footer";
 import MyNavBar from "@/components/NavBar";
 import { createServerClient } from "@/utils/supabase/server";
 import Image from "next/image";
@@ -17,13 +18,14 @@ export default async function DashCard({ params }: any) {
     <main>
       <MyNavBar/>
       <div
-          style={{backgroundImage: 'url(https://wallpapergod.com/images/hd/game-of-thrones-1920X1080-wallpaper-u1cdpjrxyhy3w35y.jpeg)'}}
+          style={{backgroundImage: 'url(https://wallpapergod.com/images/hd/game-of-thrones-1920X1080-wallpaper-u1cdpjrxyhy3w35y.jpeg)',
+            backgroundRepeat: "repeat", 
+          }}
 
-       className="p-2 pb-40 min-w-80">
+       className="p-2 pb-36 min-w-80 bg-white">
         <div className=" mb-4 sm:mb-0 sm:w-full w-80 rounded-t bg-opacity-90 bg-gray-500 flex justify-center items-center ">
           <div>
-            <h1 className=" h-10 w-full flex items-center text-3xl font-semibold text-amber-500">
-              EDIT CHARACTER
+            <h1 className=" h-10 w-full flex items-center text-lg sm:text-3xl font-semibold text-amber-500">CHARACTER´S INFORMATION
             </h1>
           </div>
         </div>
@@ -41,9 +43,9 @@ export default async function DashCard({ params }: any) {
             />
           </div>
           {/* box 2 */}
-          <div className="p-6 shadow-2xl rounded-t overflow-hidden bg-gray-200 sm:max-w-96 sm:min-h-96 h-80 w-80 border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
+          <div className="p-6 shadow-2xl rounded-t overflow-hidden bg-opacity-70 bg-gray-500 sm:max-w-96 sm:min-h-96 h-80 w-80 border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
             <div className="text-center">
-              <div className="divide-y text-gray-900 font-bold text-xl ">
+              <div className="divide-y text-gray-900 font-bold text-xl tracking-widest">
                 {character?.data.name} {character?.data.lastName}
               </div>
               {/* SEPARADOR */}
@@ -53,37 +55,37 @@ export default async function DashCard({ params }: any) {
               <div>
                 <div className="grid grid-cols-2 m-2">
                   <div>
-                    <p className="text-gray-700 text-base font-semibold">
+                    <p className="text-gray-50 text-base font-semibold">
                       First Name
                     </p>
-                    <p className="mb-4">{character?.data.name}</p>
+                    <p className="mb-4 font-semibold">{character?.data.name}</p>
                   </div>
                   <div>
-                    <p className="text-gray-700 text-base font-semibold">
+                    <p className="text-gray-50 text-base font-semibold">
                       Last Name
                     </p>
-                    <p className="mb-4">{character?.data.lastName}</p>
+                    <p className="mb-4 font-semibold">{character?.data.lastName}</p>
                   </div>
                 </div>
 
                 <div className="grid grid-cols-2 m-2">
                   <div>
-                    <p className="text-gray-700 text-base font-semibold">
+                    <p className="text-gray-50 text-base font-semibold">
                       House
                     </p>
-                    <p className="mb-4">{character?.data.house}</p>
+                    <p className="mb-4 font-semibold">{character?.data.house}</p>
                   </div>
                   <div>
-                    <p className="text-gray-700 text-base font-semibold">
+                    <p className="text-gray-50 text-base font-semibold">
                       Title
                     </p>
-                    <p className="mb-4">{character?.data.title}</p>
+                    <p className="mb-4 font-semibold">{character?.data.title}</p>
                   </div>
                 </div>
                 {/* botones */}
                 <div
                   id="buttons-char"
-                  className=" flex justify-center items-center sm:h-24"
+                  className=" flex justify-between items-center sm:h-24"
                 >
                   <Link
                     className="px-3 py-2 h-10 w-28 mt-4 border-2 border-amber-400 bg-white text-amber-500 rounded-md  text-sm font-bold hover:border-none hover:bg-amber-500 hover:text-white hover:font-semibold"
@@ -99,6 +101,7 @@ export default async function DashCard({ params }: any) {
           </div>
         </div>
       </div>
+      <MyFooter/>
     </main>
   );
 }

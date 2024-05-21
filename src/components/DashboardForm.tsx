@@ -5,6 +5,7 @@ import { SingOutBtn } from "./SingOut-Btn";
 import { Typewriters } from "./Typewriter";
 import NavBar from "./NavBar";
 import MyNavBar from "./NavBar";
+import MyFooter from "./Footer";
 
 
 
@@ -21,7 +22,7 @@ export default async function DashboardPage() {
       </div>
 
       <div className=" m-6">
-        <h2 className=" text-amber-500 text-5xl mb-4">Game of Thrones</h2>
+        <h2 className=" text-amber-500 text-5xl mb-4 font-serif uppercase ">Game of Thrones</h2>
         <Typewriters />
       </div>
 
@@ -30,7 +31,7 @@ export default async function DashboardPage() {
           <CharacterCard character={character} key={character.id} />
         ))}
       </div>
-      <footer className=" bg-amber-600 mt-6 w-full h-12"></footer>
+        <MyFooter/>
     </main>
   );
 }

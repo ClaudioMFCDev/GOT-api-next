@@ -15,10 +15,8 @@ import { SingOutBtn } from "./SingOut-Btn";
 
 export default function MyNavBar() {
   const navigation = [
-    { name: "Dashboard", href: "/", current: true },
+    { name: "Dashboard", href: "/", current: false },
     { name: "Create", href: "/create", current: false },
-    { name: "Projects", href: "#", current: false },
-    { name: "Calendar", href: "#", current: false },
   ];
 
   function classNames(...classes: any) {
@@ -45,6 +43,7 @@ export default function MyNavBar() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center bg-black overflow-hidden rounded-lg">
+                  <a href="/">
                   <img
                     width={100}
                     height={100}
@@ -52,18 +51,18 @@ export default function MyNavBar() {
                     src="/gotlogo3.jpg"
                     alt="Your Company"
                   />
+                  </a>
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-4">
+                  <div className="flex space-x-4 ">
                     {navigation.map((item) => (
                       <a
-                        // onClick={() => item.current= {true}}
                         key={item.name}
                         href={item.href}
                         className={classNames(
                           item.current
                             ? "bg-gray-900 text-amber-300"
-                            : "text-amber-500 hover:bg-amber-500 hover:text-white hover:font-semibold ",
+                            : "transition duration-300 text-amber-500 hover:bg-amber-500 hover:text-white hover:font-semibold ",
                           "rounded-md px-3 py-2 text-sm font-medium"
                         )}
                         aria-current={item.current ? "page" : true}
@@ -83,7 +82,7 @@ export default function MyNavBar() {
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        src="https://icon-library.com/images/icon-user/icon-user-15.jpg"
                         alt=""
                       />
                     </MenuButton>
@@ -98,32 +97,6 @@ export default function MyNavBar() {
                     leaveTo="transform opacity-0 scale-95"
                   >
                     <MenuItems className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                      <MenuItem>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(
-                              active ? "bg-gray-100" : "",
-                              "block px-4 py-2 text-sm text-gray-700"
-                            )}
-                          >
-                            Your Profile
-                          </a>
-                        )}
-                      </MenuItem>
-                      <MenuItem>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(
-                              active ? "bg-gray-100" : "",
-                              "block px-4 py-2 text-sm text-gray-700"
-                            )}
-                          >
-                            Settings
-                          </a>
-                        )}
-                      </MenuItem>
                       <MenuItem>
                         {({ active }) => (
                           <div>

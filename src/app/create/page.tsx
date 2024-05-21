@@ -1,4 +1,5 @@
 import { CreateCharacter } from "@/components/Create-Character";
+import MyFooter from "@/components/Footer";
 import MyNavBar from "@/components/NavBar";
 
 export default async function createPage() {
@@ -19,6 +20,7 @@ export default async function createPage() {
           />
         </div>
       </div>
+      <MyFooter/>
     </main>
   );
 }

@@ -4,7 +4,7 @@ import Typewriter from "typewriter-effect";
 export const Typewriters = () => {
   return (
 
-      <div className=" text-white min-h-28">
+      <div className=" text-white min-h-28 font-serif sm:text-lg ">
         <Typewriter
           options={{
 

@@ -130,7 +130,7 @@ export default function EditChar({ character }: EditCharProps) {
               className="  flex justify-center items-center sm:h-24"
             >
               <button
-                className=" px-3 py-2 mt-2 h-9 w-28 sm:mt-0 border-2 border-amber-400 bg-white text-amber-500 rounded-md text-sm font-bold hover:bg-amber-500 hover:text-white hover:font-semibold hover:border-none"
+                className=" px-3 mt-2 h-9 w-28 sm:mt-0 border-2 border-amber-400 bg-white text-amber-500 rounded-md text-sm font-extrabold transition duration-300 hover:bg-amber-500 hover:text-white hover:font-extrabold hover:border-none tracking-widest"
                 type="submit"
               >
                 SAVE
