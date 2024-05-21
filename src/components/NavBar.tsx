@@ -47,8 +47,8 @@ export default function MyNavBar() {
                   <img
                     width={100}
                     height={100}
-                    className="h-8 w-auto"
-                    src="/gotlogo3.jpg"
+                    className="h-10 w-auto"
+                    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.etsystatic.com%2F10493948%2Fr%2Fil%2F243bc5%2F1845738682%2Fil_1588xN.1845738682_pd8n.jpg&f=1&nofb=1&ipt=4024acf6a9b5d0050d817f88f7da8d27aec08f17e59463e671fa71a7a251bf14&ipo=images"
                     alt="Your Company"
                   />
                   </a>
