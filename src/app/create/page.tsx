@@ -7,12 +7,12 @@ export default async function createPage() {
     <main>
       <MyNavBar />
       <div className=" flex">
-        <div className="w-1/2 bg-gray-600">
+        <div className="w-1/2 lg:bg-gray-600">
           <CreateCharacter />
         </div>
-        <div className="w-1/2 bg-amber-500 flex justify-center items-center opacity-75">
+        <div className="w-1/2 invisible lg:visible bg-amber-500 opacity-75">
           <img
-           className=""
+           className="mx-auto"
             src="https://c4.wallpaperflare.com/wallpaper/474/430/502/game-of-thrones-daenerys-targaryen-wallpaper-preview.jpg"
             alt="gotWallpaper"
             height={100}

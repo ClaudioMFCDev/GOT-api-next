@@ -6,7 +6,7 @@ export const CreateCharacter = () => {
 
   return (
     <main className="flex-1">
-      <div className="p-6 border-4 border-amber-500 rounded-3xl mx-32 my-12 min-w-96">
+      <div className=" md:p-6 p-2 mx-14 border-4 border-amber-500 rounded-3xl lg:mx-32 my-12 min-w-80 sm:min-w-96">
         <h1 className="ml-6 text-white font-bold text-xl text">
           Create New Character
         </h1>
@@ -32,7 +32,7 @@ export const CreateCharacter = () => {
             <div>
               <label className="text-white text-base font-semibold"> Name</label>
               <input
-                className="w-80 mb-2 mt-0.5 rounded p-1 text-black font-semibold"
+                className=" w-64 sm:w-80 mb-2 mt-0.5 rounded p-1 text-black font-semibold"
                 name="name"
                 type="text"
               />
@@ -40,7 +40,7 @@ export const CreateCharacter = () => {
             <div>
               <label className="text-white text-base font-semibold"> Last Name</label>
               <input
-                className="w-80 mb-2 mt-0.5 rounded p-1 text-black font-semibold"
+                className=" w-64 sm:w-80 mb-2 mt-0.5 rounded p-1 text-black font-semibold"
                 name="lastName"
                 type="text"
               />
@@ -48,7 +48,7 @@ export const CreateCharacter = () => {
             <div>
               <label className="text-white text-base font-semibold"> House</label>
               <input
-                className="w-80 mb-2 mt-0.5 rounded p-1 text-black font-semibold"
+                className=" w-64 sm:w-80 mb-2 mt-0.5 rounded p-1 text-black font-semibold"
                 name="house"
                 type="text"
               />
@@ -56,7 +56,7 @@ export const CreateCharacter = () => {
             <div>
               <label className="text-white text-base font-semibold"> Title</label>
               <input
-                className="w-80 mb-2 mt-0.5 rounded p-1 text-black font-semibold"
+                className=" w-64 sm:w-80 mb-2 mt-0.5 rounded p-1 text-black font-semibold"
                 name="title"
                 type="text"
               />
@@ -64,7 +64,7 @@ export const CreateCharacter = () => {
             <div>
               <label className="text-white text-base font-semibold"> Picture</label>
               <input
-                className="italic w-80 mb-2 mt-0.5 rounded p-1 text-black font-semibold"
+                className="italic  w-64 sm:w-80 mb-2 mt-0.5 rounded p-1 text-black font-semibold"
                 name="image"
                 type="text"
               />
