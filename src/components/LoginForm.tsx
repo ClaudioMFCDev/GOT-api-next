@@ -49,8 +49,6 @@ export default function LoginForm() {
                           } else {
                             router.push('/dashboard');
                           }
-
-
                     }} 
                     >
                         <div>

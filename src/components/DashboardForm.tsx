@@ -13,8 +13,6 @@ export default async function DashboardPage() {
   const supabase = createServerClient();
   const { data } = await supabase.from("character").select("*");
 
-
-
   return (
     <main className=" bg-xxpaynesGray">
       <div >

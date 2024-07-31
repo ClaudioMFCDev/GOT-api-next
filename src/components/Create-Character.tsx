@@ -1,8 +1,10 @@
 "use client";
 import { createClient } from "@/utils/supabase/client";
+import { useRouter } from "next/navigation";
 
 export const CreateCharacter = () => {
   const supabase = createClient();
+  const router = useRouter();
 
   return (
     <main className="flex-1">
@@ -24,9 +26,12 @@ export const CreateCharacter = () => {
               const title = formData.get("title")?.toString();
               const image = formData.get("image")?.toString();
 
-              const { data, error } = await supabase
-                .from("character")
-                .insert({ name, lastName, house, title, image });
+              // const { data, error } = await supabase
+              //   .from("character")
+              //   .insert({ name, lastName, house, title, image });
+
+              router.push('/dashboard');
+
             }}
           >
             <div>

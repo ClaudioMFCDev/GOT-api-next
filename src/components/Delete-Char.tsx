@@ -9,7 +9,7 @@ export const DeleteCharButton = ({character}: any) => {
     console.log(character);
 
     const onDelete = async () => {
-      await supabase.from('character').delete().eq('id', character.id);
+      //await supabase.from('character').delete().eq('id', character.id);
       router.push('/dashboard');
       
     }

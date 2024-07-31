@@ -24,10 +24,10 @@ export default function EditChar({ character }: EditCharProps) {
     const title = formData.get("title")?.toString();
     const image = formData.get("image")?.toString();
 
-    const { data, error } = await supabase
-      .from("character")
-      .update({ name, lastName, house, title, image })
-      .eq("id", character.id);
+    // const { data, error } = await supabase
+    //   .from("character")
+    //   .update({ name, lastName, house, title, image })
+    //   .eq("id", character.id);
 
     router.push("/dashboard");
   };

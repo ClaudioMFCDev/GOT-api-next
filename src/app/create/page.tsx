@@ -10,6 +10,7 @@ export default async function createPage() {
         <div className="w-1/2 lg:bg-gray-600">
           <CreateCharacter />
         </div>
+        {/*****************************/ }
         <div className="w-1/2 invisible lg:visible bg-amber-500 opacity-75">
           <img
            className="mx-auto"

@@ -10,7 +10,7 @@ export default async function Home() {
   if(!user.error) {
     redirect('/dashboard');
   }
-
+ 
   return (
     <LoginForm/>
   );
