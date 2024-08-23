@@ -15,7 +15,7 @@ import { SingOutBtn } from "./SingOut-Btn";
 
 export default function MyNavBar() {
   const navigation = [
-    { name: "Dashboard", href: "/", current: false },
+    { name: "Dashboard", href: "/dashboard", current: false },
     { name: "Create", href: "/create", current: false },
   ];
 
@@ -43,7 +43,7 @@ export default function MyNavBar() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center bg-black overflow-hidden rounded-lg">
-                  <a href="/">
+                  <a href="/dashboard">
                   <img
                     width={100}
                     height={100}

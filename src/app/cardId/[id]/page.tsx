@@ -7,6 +7,7 @@ import Link from "next/link";
 
 export default async function DashCard({ params }: any) {
   const supabase = createServerClient();
+  const {data : {user}} = await supabase.auth.getUser();
 
   const character = await supabase
     .from("character")
@@ -94,7 +95,7 @@ export default async function DashCard({ params }: any) {
                   >
                     EDIT
                   </Link>
-                  <DeleteCharButton character={character.data} />
+                  <DeleteCharButton character={character.data} user={user} />
                 </div>
               </div>
             </div>

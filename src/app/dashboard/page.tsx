@@ -8,9 +8,9 @@ export default async function DashboardPage() {
     const supabase = createServerClient();
     const user = await supabase.auth.getUser();
 
-    if (user.error) {
-        redirect('/');
-    }
+    // if (user.error) {
+    //     redirect('/');
+    // }
 
     return (
         <DashboardForm/>

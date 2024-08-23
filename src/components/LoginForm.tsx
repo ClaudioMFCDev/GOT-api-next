@@ -7,6 +7,10 @@ export default function LoginForm() {
     const router = useRouter();
     const [error, setError] = useState<string | null>(null);
 
+    const handleInvite = () => {
+        router.push("/dashboard");
+    }
+
     return (
         <main className=" bg-gray-800 text-white flex min-h-screen flex-col items-center justify-between p-10 ">
 
@@ -79,11 +83,11 @@ export default function LoginForm() {
                                     className="block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 />
                             </div>
-                                <div className="text-sm mt-2 text-right	">
+                                {/* <div className="text-sm mt-2 text-right	">
                                     <a href="#" className="font-semibold  hover:text-base hover:shadow-slate-300">
                                         Olvidaste la contraseña?
                                     </a>
-                                </div>
+                                </div> */}
                         </div>
 
                         <div>
@@ -93,9 +97,18 @@ export default function LoginForm() {
                             >
                                 Ingresar
                             </button>
-                            {error && <p className="mt-4 text-xlightcyan">{error}</p>}
+                            {error && <p className="my-4 italic text-amber-300">{error}</p>}
                         </div>
+                        
                     </form>
+                    <div>
+                            <button
+                                onClick={handleInvite}
+                                className="mt-2 w-full justify-center rounded-lg bg-xxpaynesGray h-10 text-md font-semibold leading-6  shadow-sm transition duration-300 hover:bg-amber-50   hover:text-lg hover:text-amber-500  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-xhonolulublue"
+                            >
+                                Ingresar como invitado
+                            </button>
+                        </div>
 
                 </div>
             </div>

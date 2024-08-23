@@ -2,9 +2,14 @@
 import { createClient } from "@/utils/supabase/client";
 import { useRouter } from "next/navigation";
 
-export const CreateCharacter = () => {
+interface CreateProps{
+  user: any;
+}
+
+export const CreateCharacter = ({user}: CreateProps) => {
   const supabase = createClient();
   const router = useRouter();
+  const isUserAuthenticated = Boolean(user)
 
   return (
     <main className="flex-1">
@@ -26,9 +31,9 @@ export const CreateCharacter = () => {
               const title = formData.get("title")?.toString();
               const image = formData.get("image")?.toString();
 
-              // const { data, error } = await supabase
-              //   .from("character")
-              //   .insert({ name, lastName, house, title, image });
+              const { data, error } = await supabase
+                .from("character")
+                .insert({ name, lastName, house, title, image });
 
               router.push('/dashboard');
 
@@ -76,8 +81,10 @@ export const CreateCharacter = () => {
             </div>
             <div className="flex justify-center">
               <button
-                className=" mt-4 bg-white text-amber-500 rounded-md px-3 py-2 text-sm font-bold hover:bg-amber-500 hover:text-white hover:font-semibold"
+                className={`mt-4 bg-white text-amber-500 rounded-md px-3 py-2 text-sm font-bold hover:bg-amber-500 hover:text-white
+                  ${isUserAuthenticated?  "hover:font-semibold" : "opacity-50 cursor-not-allowed" }`}
                 type="submit"
+                disabled={!isUserAuthenticated}
               >
                 CREATE
               </button>

@@ -5,13 +5,15 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { FormEvent } from "react";
 
-interface EditCharProps {
+type EditCharProps = {
   character: any;
+  user: any;
 }
 
-export default function EditChar({ character }: EditCharProps) {
+export default async function EditChar({ character, user }: EditCharProps) {
   const supabase = createClient();
   const router = useRouter();
+  const isUserAuthenticated = Boolean(user);
 
   const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -24,18 +26,21 @@ export default function EditChar({ character }: EditCharProps) {
     const title = formData.get("title")?.toString();
     const image = formData.get("image")?.toString();
 
-    // const { data, error } = await supabase
-    //   .from("character")
-    //   .update({ name, lastName, house, title, image })
-    //   .eq("id", character.id);
-
-    router.push("/dashboard");
+    if (!user.error) {
+      const { data, error } = await supabase
+        .from("character")
+        .update({ name, lastName, house, title, image })
+        .eq("id", character.id);
+      router.push("/dashboard");
+    } else {
+      alert("Login to edit");
+      router.push("/dashboard");
+    }
   };
 
   return (
     <main>
-      <div 
-      className=" sm:flex flex-none justify-center items-center">
+      <div className=" sm:flex flex-none justify-center items-center">
         {/* box 1 */}
         <div className=" h-56 w-80 border-4 rounded-t border-b-0 sm:border-b-4 sm:rounded-b sm:border-r-0 sm:border-t-0 sm:max-w-96 sm:min-h-96 border-amber-500 bg-slate-600 bg-cover lg:rounded-t-none lg:rounded-l text-center overflow-hidden">
           <Image
@@ -127,11 +132,23 @@ export default function EditChar({ character }: EditCharProps) {
 
             <div
               id="buttons-char"
-              className="  flex justify-center items-center sm:h-24"
+              className=" flex justify-center items-center sm:h-24"
             >
               <button
-                className=" px-3 mt-2 h-9 w-28 sm:mt-0 border-2 border-amber-400 bg-white text-amber-500 rounded-md text-sm font-extrabold transition duration-300 hover:bg-amber-500 hover:text-white hover:font-extrabold hover:border-none tracking-widest"
+                className={`px-3 mt-2 h-9 w-28 sm:mt-0 border-2 border-amber-400 bg-white
+                 text-amber-500 rounded-md text-sm font-extrabold transition duration-300
+                 ${
+                   isUserAuthenticated
+                     ? "hover:bg-amber-500 hover:text-white hover:font-extrabold hover:border-none tracking-widest"
+                     : "opacity-50 cursor-not-allowed"
+                 }`}
                 type="submit"
+                disabled={!isUserAuthenticated}
+                onClick={() => {
+                  if (!isUserAuthenticated) {
+                    alert("You need to log in to save chages.");
+                  }
+                }}
               >
                 SAVE
               </button>
